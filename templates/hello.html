@@ -1,0 +1,31 @@
+<!doctype html>
+<html>	
+	<head>
+		<title>Sentiment Demo</title>
+		<!-- Bootstrap -->
+		<link href="templates/assets/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Main Style -->
+		<link href="templates/assets/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+	
+		<form action="{{ url_for('index_page') }}" method=post>
+			<div class="center">	
+				<div class="form-group">
+					<label for="exampleTextarea">Введите/вставьте пример отзыва: </label>
+					<textarea class="form-control" id="exampleTextarea" name=text rows=5 cols=40>{{ text }}</textarea>
+					<button type=submit class="btn btn-primary" value="Оценить">Оценить</button>
+				</div>
+				
+				<div class="ex">
+					<label id="head-name">Результат: </label>
+					<div class="bd-callout bd-callout-warning">
+						<p>{{ prediction_message }}</p>
+					</div>
+				<div>
+			</div>
+		
+	</body>
+
+</html>
